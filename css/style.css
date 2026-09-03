@@ -388,7 +388,7 @@ button, .btn { font-family: inherit; cursor: pointer; }
 }
 
 @media (max-width: 600px) {
-  .hero-slider { height: auto; aspect-ratio: 2 / 1; min-height: unset; max-height: unset; }
+  .hero-slider { height: auto; aspect-ratio: 3 / 1; min-height: unset; max-height: unset; }
   .stats { grid-template-columns: 1fr; }
   .service-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
   .faq-grid { grid-template-columns: 1fr; }
