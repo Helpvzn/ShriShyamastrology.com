@@ -7,5 +7,200 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+  CMS.init({
+    config: {
+      backend: {
+        name: "github",
+        repo: "Helpvzn/ShriShyamastrology.com",
+        branch: "main",
+        base_url: "https://shrishyamastrology.com",
+        auth_endpoint: "api/auth"
+      },
+      media_folder: "src/assets/img",
+      public_folder: "/assets/img",
+      collections: [
+        {
+          name: "site_settings",
+          label: "⚙️ Global Settings",
+          files: [
+            {
+              name: "site",
+              label: "Site Settings (Name, Colors, WhatsApp, Nav)",
+              file: "src/_data/site.json",
+              fields: [
+                { label: "Site Name", name: "name", widget: "string" },
+                { label: "Domain", name: "domain", widget: "string" },
+                { label: "Tagline", name: "tagline", widget: "string" },
+                { label: "Meta Description", name: "description", widget: "text" },
+                { label: "WhatsApp (with country code, no +)", name: "whatsapp", widget: "string", hint: "Example: 917976325202" },
+                { label: "WhatsApp Display Number", name: "whatsapp_display", widget: "string", hint: "Example: 7976325202" },
+                { label: "Logo", name: "logo", widget: "image" },
+                { label: "Favicon", name: "favicon", widget: "image" },
+                { label: "Footer About Text", name: "footer_about", widget: "text" },
+                { label: "Copyright Text", name: "copyright", widget: "string" },
+                {
+                  label: "Colors", name: "colors", widget: "object",
+                  fields: [
+                    { label: "Primary Color (Saffron)", name: "primary", widget: "color", allowInput: true },
+                    { label: "Primary Deep (Dark Red)", name: "primary_deep", widget: "color", allowInput: true },
+                    { label: "Accent (Orange)", name: "accent", widget: "color", allowInput: true },
+                    { label: "Background (Cream)", name: "background", widget: "color", allowInput: true },
+                    { label: "Text Color (Dark Brown)", name: "text", widget: "color", allowInput: true },
+                    { label: "Gold Color", name: "gold", widget: "color", allowInput: true }
+                  ]
+                },
+                {
+                  label: "Fonts", name: "fonts", widget: "object",
+                  fields: [
+                    { label: "Heading Font (Google Font name)", name: "heading", widget: "string" },
+                    { label: "Body Font (Google Font name)", name: "body", widget: "string" }
+                  ]
+                },
+                {
+                  label: "Navigation Links", name: "nav", widget: "list",
+                  fields: [
+                    { label: "Label", name: "label", widget: "string" },
+                    { label: "URL", name: "url", widget: "string" }
+                  ]
+                },
+                {
+                  label: "Footer Links", name: "footer_links", widget: "list",
+                  fields: [
+                    { label: "Label", name: "label", widget: "string" },
+                    { label: "URL", name: "url", widget: "string" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          name: "homepage",
+          label: "🏠 Homepage Sections",
+          files: [
+            {
+              name: "homepage",
+              label: "Homepage (All Sections)",
+              file: "src/_data/homepage.json",
+              fields: [
+                {
+                  label: "Sections", name: "sections", widget: "list",
+                  types: [
+                    {
+                      label: "🖼️ Hero Slider (Banner)", name: "hero_slider", widget: "object",
+                      fields: [
+                        { label: "Background Color", name: "bg_color", widget: "color", allowInput: true, default: "#1a0c08" },
+                        { label: "Height (Desktop) e.g. 400px or 60vh", name: "height_desktop", widget: "string", default: "min(60vh,480px)" },
+                        { label: "Autoplay Speed (ms) e.g. 4500", name: "autoplay_ms", widget: "number", default: 4500 },
+                        {
+                          label: "Slides", name: "slides", widget: "list",
+                          fields: [
+                            { label: "Image", name: "image", widget: "image" },
+                            { label: "Alt Text", name: "alt", widget: "string" }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      label: "🗂️ Services Grid", name: "services_grid", widget: "object",
+                      fields: [
+                        { label: "Background Color", name: "bg_color", widget: "color", allowInput: true, default: "#fff6ea" },
+                        { label: "Padding Top", name: "padding_top", widget: "string", default: "72px" },
+                        { label: "Padding Bottom", name: "padding_bottom", widget: "string", default: "72px" },
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Subheading", name: "subheading", widget: "string" },
+                        { label: "Guarantee Text", name: "guarantee_text", widget: "text", required: false },
+                        {
+                          label: "Stats", name: "stats", widget: "list", required: false,
+                          fields: [
+                            { label: "Label", name: "label", widget: "string" },
+                            { label: "Value", name: "value", widget: "string" }
+                          ]
+                        },
+                        {
+                          label: "Service Cards", name: "cards", widget: "list",
+                          fields: [
+                            { label: "Title", name: "title", widget: "string" },
+                            { label: "Image", name: "image", widget: "image" },
+                            { label: "Link URL", name: "link", widget: "string" }
+                          ]
+                        },
+                        { label: "CTA Button Label", name: "cta_label", widget: "string", required: false },
+                        { label: "CTA Button URL", name: "cta_url", widget: "string", required: false }
+                      ]
+                    },
+                    {
+                      label: "⭐ Team / Reviews Section", name: "team_reviews", widget: "object",
+                      fields: [
+                        { label: "Background Gradient Start", name: "bg_color_start", widget: "color", allowInput: true, default: "#c93600" },
+                        { label: "Background Gradient End", name: "bg_color_end", widget: "color", allowInput: true, default: "#ff4d00" },
+                        { label: "Text Color", name: "text_color", widget: "color", allowInput: true, default: "#ffffff" },
+                        { label: "Padding Top", name: "padding_top", widget: "string", default: "72px" },
+                        { label: "Padding Bottom", name: "padding_bottom", widget: "string", default: "72px" },
+                        { label: "Subheading", name: "subheading", widget: "string" },
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Note / WhatsApp invite text", name: "note", widget: "text" },
+                        {
+                          label: "Team Members", name: "members", widget: "list",
+                          fields: [
+                            { label: "Name", name: "name", widget: "string" },
+                            { label: "Photo", name: "image", widget: "image" }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      label: "ℹ️ About Section", name: "about", widget: "object",
+                      fields: [
+                        { label: "Background Color", name: "bg_color", widget: "color", allowInput: true, default: "#fff6ea" },
+                        { label: "Padding Top", name: "padding_top", widget: "string", default: "72px" },
+                        { label: "Padding Bottom", name: "padding_bottom", widget: "string", default: "72px" },
+                        { label: "Gallery Images", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" } },
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } },
+                        { label: "Button Label", name: "cta_label", widget: "string", required: false },
+                        { label: "Button URL", name: "cta_url", widget: "string", required: false }
+                      ]
+                    },
+                    {
+                      label: "❓ FAQ Section", name: "faq", widget: "object",
+                      fields: [
+                        { label: "Background Color", name: "bg_color", widget: "color", allowInput: true, default: "#fff6ea" },
+                        { label: "Padding Top", name: "padding_top", widget: "string", default: "72px" },
+                        { label: "Padding Bottom", name: "padding_bottom", widget: "string", default: "72px" },
+                        { label: "Heading", name: "heading", widget: "string" },
+                        {
+                          label: "FAQ Items", name: "items", widget: "list",
+                          fields: [
+                            { label: "Question", name: "question", widget: "string" },
+                            { label: "Answer", name: "answer", widget: "text" }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      label: "📣 CTA / WhatsApp Block", name: "cta_block", widget: "object",
+                      fields: [
+                        { label: "Background Color", name: "bg_color", widget: "color", allowInput: true, default: "#fff4d9" },
+                        { label: "Text Color", name: "text_color", widget: "color", allowInput: true, default: "#2a1a12" },
+                        { label: "Padding Top", name: "padding_top", widget: "string", default: "72px" },
+                        { label: "Padding Bottom", name: "padding_bottom", widget: "string", default: "72px" },
+                        { label: "Heading", name: "heading", widget: "string" },
+                        { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } },
+                        { label: "Button Label", name: "cta_label", widget: "string" },
+                        { label: "Button URL", name: "cta_url", widget: "string" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  });
+  </script>
 </body>
 </html>
