@@ -3,7 +3,5 @@
     {% for slide in s.slides %}
       <img {% if loop.first %}class="active"{% endif %} src="{{ slide.image }}" alt="{{ slide.alt }}">
     {% endfor %}
-    <button class="hero-arrow prev" type="button" aria-label="Previous">&#8249;</button>
-    <button class="hero-arrow next" type="button" aria-label="Next">&#8250;</button>
   </div>
 </section>

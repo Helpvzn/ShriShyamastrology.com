@@ -12,19 +12,12 @@ if (slider) {
     slides.forEach((img, idx) => img.classList.toggle("active", idx === n));
   };
   show(0);
-  slider.querySelector(".next")?.addEventListener("click", () => {
-    i = (i + 1) % slides.length;
-    show(i);
-  });
-  slider.querySelector(".prev")?.addEventListener("click", () => {
-    i = (i - 1 + slides.length) % slides.length;
-    show(i);
-  });
   setInterval(() => {
     i = (i + 1) % slides.length;
     show(i);
   }, 4500);
 }
+
 
 document.querySelectorAll(".faq-item button").forEach((btn) => {
   btn.addEventListener("click", () => {

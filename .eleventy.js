@@ -3,9 +3,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
+
+  // CMS admin — copy config.yml as passthrough (index.html gets processed as template)
+  eleventyConfig.addPassthroughCopy({ "src/admin/config.yml": "admin/config.yml" });
 
   // Helper filter: get value or default
   eleventyConfig.addFilter("default", (value, fallback) => value || fallback);
@@ -22,3 +24,4 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "njk",
   };
 };
+
