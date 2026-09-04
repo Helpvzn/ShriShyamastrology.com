@@ -1,0 +1,28 @@
+---
+layout: base.njk
+title: Contact Us
+description: Contact Shri Shyam Astrology on WhatsApp.
+canonical: /contact/
+---
+<section class="page-hero"><div class="container">
+  <h1 class="section-title">Contact Us</h1>
+  <p class="section-sub">Sirf WhatsApp — koi Facebook, Instagram ya payment QR yahan nahi</p>
+</div></section>
+<section class="section">
+  <div class="container contact-grid">
+    <div class="contact-card">
+      <h2>WhatsApp</h2>
+      <p class="wa-number">{{ site.whatsapp_display }}</p>
+      <p>Naam, janm tithi, samay aur jagah likhkar message bhejiye.</p>
+      <a class="btn" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">Open WhatsApp</a>
+    </div>
+    <form class="contact-form" id="consult-form">
+      <h2>Send a short note</h2>
+      <label for="name">Your name</label>
+      <input id="name" name="name" required>
+      <label for="message">Your question</label>
+      <textarea id="message" name="message" rows="5" required placeholder="Kundli / matching / career..."></textarea>
+      <p><button class="btn" type="submit">Continue on WhatsApp</button></p>
+    </form>
+  </div>
+</section>

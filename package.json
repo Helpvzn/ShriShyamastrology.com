@@ -1,0 +1,25 @@
+{
+  "name": "astrologysay.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve --port 3000",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Helpvzn/ShriShyamastrology.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Helpvzn/ShriShyamastrology.com/issues"
+  },
+  "homepage": "https://github.com/Helpvzn/ShriShyamastrology.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

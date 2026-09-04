@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ site.name }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  {% if canonical %}<link rel="canonical" href="https://{{ site.domain }}{{ canonical }}">{% endif %}
+  <link rel="icon" href="{{ site.favicon }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fenix&family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    :root {
+      --color-primary: {{ site.colors.primary }};
+      --color-primary-deep: {{ site.colors.primary_deep }};
+      --color-accent: {{ site.colors.accent }};
+      --color-bg: {{ site.colors.background }};
+      --color-text: {{ site.colors.text }};
+      --color-gold: {{ site.colors.gold }};
+      --font-heading: '{{ site.fonts.heading }}', serif;
+      --font-body: '{{ site.fonts.body }}', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="/">
+        <img src="{{ site.logo }}" alt="{{ site.name }} logo">
+        <span>{{ site.name }}</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        {% for item in site.nav %}
+          <a href="{{ item.url }}" {% if page.url == item.url %}class="active"{% endif %}>{{ item.label }}</a>
+        {% endfor %}
+        <a class="btn" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  {{ content | safe }}
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>About {{ site.name }}</h3>
+        <p>{{ site.footer_about }}</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        {% for item in site.nav %}
+          <p><a href="{{ item.url }}">{{ item.label }}</a></p>
+        {% endfor %}
+      </div>
+      <div>
+        <h3>Talk to us</h3>
+        <p>WhatsApp only</p>
+        <p class="wa-number">{{ site.whatsapp_display }}</p>
+        <p><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">Start chat</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; {{ site.copyright }}</span>
+      <span>
+        {% for link in site.footer_links %}
+          <a href="{{ link.url }}">{{ link.label }}</a>{% if not loop.last %} &middot; {% endif %}
+        {% endfor %}
+      </span>
+    </div>
+  </footer>
+
+  <!-- WA Float -->
+  <a class="wa-float" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener" aria-label="WhatsApp {{ site.whatsapp_display }}">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.47c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.62.14-.18.27-.71.88-.87 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.62-1.49-.85-2.04-.22-.53-.45-.46-.62-.46h-.53c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.98 2.66 1.12 2.84c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.57.65.21 1.25.18 1.72.11.52-.08 1.6-.65 1.83-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32zM16.02 29c-2.27 0-4.5-.61-6.45-1.76L4 28.99l1.78-5.42A12.94 12.94 0 1 1 16.02 29zm0-23.86a10.91 10.91 0 0 0-9.27 16.68l.22.36-.1.4-1.06 3.22 3.31-1.05.38-.12.37.22a10.91 10.91 0 1 0 6.15-19.71z"/></svg>
+  </a>
+  <script src="/js/main.js"></script>
+</body>
+</html>

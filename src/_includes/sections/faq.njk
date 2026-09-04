@@ -1,0 +1,13 @@
+<section class="section" id="faq" style="background:{{ s.bg_color }};padding-top:{{ s.padding_top }};padding-bottom:{{ s.padding_bottom }};">
+  <div class="container">
+    <h2 class="section-title">{{ s.heading }}</h2>
+    <div class="faq-grid">
+      {% for item in s.items %}
+      <div class="faq-item">
+        <button type="button">{{ item.question }}</button>
+        <div class="answer">{{ item.answer }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

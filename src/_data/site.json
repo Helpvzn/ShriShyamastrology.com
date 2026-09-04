@@ -1,0 +1,61 @@
+{
+  "name": "Shri Shyam Astrology",
+  "domain": "shrishyamastrology.com",
+  "tagline": "Vedic Guidance from Trusted Astrologers",
+  "description": "Shri Shyam Astrology offers kundli, matching, career, love and family consultations.",
+  "whatsapp": "917976325202",
+  "whatsapp_display": "7976325202",
+  "year": "2026",
+  "logo": "/assets/img/logo.png",
+  "favicon": "/assets/img/favicon.png",
+  "colors": {
+    "primary": "#d24102",
+    "primary_deep": "#8c0404",
+    "accent": "#f76b01",
+    "background": "#fff6ea",
+    "text": "#2a1a12",
+    "gold": "#d4af37"
+  },
+  "fonts": {
+    "heading": "Fenix",
+    "body": "Poppins"
+  },
+  "nav": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Our Services",
+      "url": "/services/"
+    },
+    {
+      "label": "Our Story",
+      "url": "/story/"
+    },
+    {
+      "label": "Contact Us",
+      "url": "/contact/"
+    },
+    {
+      "label": "Privacy Policy",
+      "url": "/privacy/"
+    }
+  ],
+  "footer_links": [
+    {
+      "label": "Privacy Policy",
+      "url": "/privacy/"
+    },
+    {
+      "label": "Return & Refund",
+      "url": "/refund/"
+    },
+    {
+      "label": "Terms & Conditions",
+      "url": "/terms/"
+    }
+  ],
+  "footer_about": "shrishyamastrology.com par aap online jyotish salah le sakte hain.",
+  "copyright": "2026 Shri Shyam Astrology. All rights reserved."
+}

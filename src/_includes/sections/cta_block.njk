@@ -1,0 +1,9 @@
+<section class="section" style="background:{{ s.bg_color }};padding-top:{{ s.padding_top }};padding-bottom:{{ s.padding_bottom }};">
+  <div class="container help-block" style="color:{{ s.text_color }}">
+    <h2>{{ s.heading }}</h2>
+    {% for para in s.paragraphs %}
+    <p>{{ para }}</p>
+    {% endfor %}
+    <a class="btn" href="{{ s.cta_url }}" target="_blank" rel="noopener">{{ s.cta_label }}</a>
+  </div>
+</section>

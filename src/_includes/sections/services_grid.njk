@@ -1,0 +1,25 @@
+<section class="section" id="services" style="background:{{ s.bg_color }};padding-top:{{ s.padding_top }};padding-bottom:{{ s.padding_bottom }};">
+  <div class="container">
+    <h1 class="section-title" style="color:var(--color-primary)">{{ s.heading }}</h1>
+    <p class="section-sub">{{ s.subheading }}</p>
+    {% if s.guarantee_text %}<p class="guarantee">{{ s.guarantee_text }}</p>{% endif %}
+    {% if s.stats %}
+    <div class="stats">
+      {% for stat in s.stats %}
+      <div class="stat"><span>{{ stat.label }}</span><strong>{{ stat.value }}</strong></div>
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="service-grid">
+      {% for card in s.cards %}
+      <a class="service-card" href="{{ card.link }}">
+        <img src="{{ card.image }}" alt="{{ card.title }}">
+        <h3>{{ card.title }}</h3>
+      </a>
+      {% endfor %}
+    </div>
+    {% if s.cta_label %}
+    <div class="center"><a class="btn" href="{{ s.cta_url }}">{{ s.cta_label }}</a></div>
+    {% endif %}
+  </div>
+</section>

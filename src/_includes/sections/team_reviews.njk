@@ -1,0 +1,15 @@
+<section class="reviews-wrap" id="reviews" style="background:linear-gradient(135deg,{{ s.bg_color_start }} 0%,{{ s.bg_color_end }} 100%);color:{{ s.text_color }};padding:{{ s.padding_top }} 0 {{ s.padding_bottom }};">
+  <div class="container">
+    <p class="section-sub">{{ s.subheading }}</p>
+    <h2 class="section-title">{{ s.heading }}</h2>
+    <p class="video-note">{{ s.note }}</p>
+    <div class="astro-row">
+      {% for m in s.members %}
+      <article class="astro-card">
+        <img src="{{ m.image }}" alt="{{ m.name }}">
+        <p>{{ m.name }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,229 @@
+{
+  "sections": [
+    {
+      "type": "hero_slider",
+      "bg_color": "#1a0c08",
+      "height_desktop": "min(68vh, 560px)",
+      "slides": [
+        {
+          "image": "/assets/img/hero-1.webp",
+          "alt": "Shri Shyam Astrology consultation"
+        },
+        {
+          "image": "/assets/img/hero-2.webp",
+          "alt": "Kundli and horoscope guidance"
+        },
+        {
+          "image": "/assets/img/hero-3.webp",
+          "alt": "Vedic astrology reading"
+        },
+        {
+          "image": "/assets/img/hero-4.webp",
+          "alt": "Palm and chart study"
+        },
+        {
+          "image": "/assets/img/hero-5.webp",
+          "alt": "Astrology remedies"
+        },
+        {
+          "image": "/assets/img/hero-6.webp",
+          "alt": "Family and marriage guidance"
+        }
+      ],
+      "autoplay_ms": 4500
+    },
+    {
+      "type": "services_grid",
+      "bg_color": "#fff6ea",
+      "padding_top": "72px",
+      "padding_bottom": "72px",
+      "heading": "Our Services",
+      "subheading": "We provide all these services",
+      "guarantee_text": "Agar aap kisi bhi jyotish salah se santusht nahi hote, to aapka payment wapas kar diya jayega. Dhanyavaad.",
+      "stats": [
+        {
+          "label": "+ AWARDS",
+          "value": "72"
+        },
+        {
+          "label": "HAPPY CUSTOMERS",
+          "value": "1.4 M+"
+        },
+        {
+          "label": "RATINGS",
+          "value": "4.5"
+        }
+      ],
+      "cards": [
+        {
+          "title": "Numerology",
+          "image": "/assets/img/service-main.png",
+          "link": "/services/#numerology"
+        },
+        {
+          "title": "Hand Reading",
+          "image": "/assets/img/gallery-1.webp",
+          "link": "/services/#hand-reading"
+        },
+        {
+          "title": "Kundli (By DOB)",
+          "image": "/assets/img/gallery-2.webp",
+          "link": "/services/#kundli"
+        },
+        {
+          "title": "Career Problem",
+          "image": "/assets/img/gallery-3.webp",
+          "link": "/services/#career"
+        },
+        {
+          "title": "Astrology for Business",
+          "image": "/assets/img/gallery-4.webp",
+          "link": "/services/#business"
+        },
+        {
+          "title": "Love Problem",
+          "image": "/assets/img/gallery-5.webp",
+          "link": "/services/#love"
+        },
+        {
+          "title": "Family Problems",
+          "image": "/assets/img/gallery-6.webp",
+          "link": "/services/#family"
+        },
+        {
+          "title": "Kundli Matching",
+          "image": "/assets/img/about-team.webp",
+          "link": "/services/#matching"
+        }
+      ],
+      "cta_label": "View all services",
+      "cta_url": "/services/"
+    },
+    {
+      "type": "team_reviews",
+      "bg_color_start": "#c93600",
+      "bg_color_end": "#ff4d00",
+      "text_color": "#ffffff",
+      "padding_top": "72px",
+      "padding_bottom": "72px",
+      "subheading": "India's trusted astrologers",
+      "heading": "Happy Customers Reviews",
+      "note": "Grahak apni kahani WhatsApp par share karte hain. Aap bhi apna sawal seedha 7976325202 par bhej sakte hain.",
+      "members": [
+        {
+          "name": "Pt. Keshav Maharaj ji",
+          "image": "/assets/img/astrologer-1.jpeg"
+        },
+        {
+          "name": "Acharya Vikash Sharma ji",
+          "image": "/assets/img/astrologer-2.jpeg"
+        },
+        {
+          "name": "Jyotish Ratna Prakash ji Tiwari",
+          "image": "/assets/img/astrologer-3.jpeg"
+        },
+        {
+          "name": "Kapil Sharma ji",
+          "image": "/assets/img/astrologer-4.jpeg"
+        },
+        {
+          "name": "Pandit Devendra Nath ji",
+          "image": "/assets/img/astrologer-5.jpeg"
+        },
+        {
+          "name": "Rohit ji Sharma",
+          "image": "/assets/img/astrologer-6.jpeg"
+        },
+        {
+          "name": "Swami Ramesh Shastri ji",
+          "image": "/assets/img/astrologer-7.jpeg"
+        },
+        {
+          "name": "Maharishi Satyadev ji Tiwari",
+          "image": "/assets/img/astrologer-8.jpeg"
+        },
+        {
+          "name": "Pandit Omkarnath Joshi ji",
+          "image": "/assets/img/astrologer-9.jpeg"
+        }
+      ]
+    },
+    {
+      "type": "about",
+      "bg_color": "#fff6ea",
+      "padding_top": "72px",
+      "padding_bottom": "72px",
+      "gallery": [
+        "/assets/img/gallery-1.webp",
+        "/assets/img/gallery-2.webp",
+        "/assets/img/gallery-3.webp",
+        "/assets/img/gallery-4.webp",
+        "/assets/img/gallery-5.webp",
+        "/assets/img/about-team.webp"
+      ],
+      "heading": "About Our Company",
+      "paragraphs": [
+        "Shri Shyam Astrology Vedic jyotish ke anubhavi acharyon ke saath ghar baithe salah deta hai. Hum kundli, matching, career, prem aur parivar ke vishayon par spasht margdarshan dete hain.",
+        "Agar aap kisi bhi desh se sachchi aur result-oriented salah dhoondh rahe hain, to yahan experienced panditon se baat kijiye. Yeh vidya peedhiyon se chali aa rahi hai."
+      ],
+      "cta_label": "Our Story",
+      "cta_url": "/story/"
+    },
+    {
+      "type": "faq",
+      "bg_color": "#fff6ea",
+      "padding_top": "72px",
+      "padding_bottom": "72px",
+      "heading": "FAQ",
+      "items": [
+        {
+          "question": "Jeevansathi kaisa milega? Shaadi ka yog hai?",
+          "answer": "Janmkundli aur grahon ki sthiti se vivah yog samjhai jaati hai."
+        },
+        {
+          "question": "Bahut prayas ke baad bhi safalta nahi milti",
+          "answer": "Kundli ki dasha aur yog kabhi-kabhi raste mein rukawat daalte hain."
+        },
+        {
+          "question": "Sehat aur parivar mein taalmela kaisa rahega?",
+          "answer": "Grahon, yog aur dasha se sehat ke sanket dekha jaata hai."
+        },
+        {
+          "question": "Mere liye best career kaun sa rahega?",
+          "answer": "Kundli ke graha, yog aur dasha dekhkar un kshetron ka sujhav diya jaata hai."
+        },
+        {
+          "question": "Sarkari naukri ya private naukri ka yog",
+          "answer": "Lagna, dasha aur grahon se yeh dekha jaata hai ki kaunsi naukri shubh ho sakti hai."
+        },
+        {
+          "question": "Kya meri usse shaadi ho payegi?",
+          "answer": "Dono kundliyon ke milan aur vivah yog dekhkar sambandh ki sambhavna batayi jaati hai."
+        },
+        {
+          "question": "Dhanwan banne ka sapna kab poora hoga?",
+          "answer": "Dhan se jude grahon aur dasha ka adhyayan karke samay aur upay samjhaye jaate hain."
+        },
+        {
+          "question": "Kya kundli mein likha sach hota hai?",
+          "answer": "Kundli janm samay ka aakashi chitra hai. Kai log ise zindagi ke faislon ke liye upyogi maante hain."
+        }
+      ]
+    },
+    {
+      "type": "cta_block",
+      "bg_color": "#fff4d9",
+      "text_color": "#2a1a12",
+      "padding_top": "72px",
+      "padding_bottom": "72px",
+      "heading": "How chatting with an astrologer can help you",
+      "paragraphs": [
+        "Jab sawal dimag mein ghumte rehte hain, to jawab ek WhatsApp message door ho sakta hai.",
+        "Zindagi ke uchchav-nichav mein Shani ya Rahu dasha jaise samay vishesh savdhani maangte hain.",
+        "Sirf samasya-samadhan hi nahi — shaadi ka shubh muhurat, naamkaran, mundan ya rashi ke anuroop ratna ke liye bhi salah milti hai."
+      ],
+      "cta_label": "Chat on WhatsApp · 7976325202",
+      "cta_url": "https://wa.me/917976325202"
+    }
+  ]
+}

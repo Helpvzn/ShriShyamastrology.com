@@ -1,0 +1,15 @@
+---
+layout: base.njk
+title: Shri Shyam Astrology
+description: Shri Shyam Astrology offers kundli, matching, career, love and family consultations. Talk on WhatsApp.
+canonical: /
+---
+{% for s in homepage.sections %}
+  {% if s.type == "hero_slider" %}{% include "sections/hero_slider.njk" %}
+  {% elif s.type == "services_grid" %}{% include "sections/services_grid.njk" %}
+  {% elif s.type == "team_reviews" %}{% include "sections/team_reviews.njk" %}
+  {% elif s.type == "about" %}{% include "sections/about.njk" %}
+  {% elif s.type == "faq" %}{% include "sections/faq.njk" %}
+  {% elif s.type == "cta_block" %}{% include "sections/cta_block.njk" %}
+  {% endif %}
+{% endfor %}

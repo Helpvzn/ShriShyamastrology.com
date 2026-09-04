@@ -1,0 +1,16 @@
+<section class="section" id="about" style="background:{{ s.bg_color }};padding-top:{{ s.padding_top }};padding-bottom:{{ s.padding_bottom }};">
+  <div class="container about-grid">
+    <div class="gallery">
+      {% for img in s.gallery %}
+      <img src="{{ img }}" alt="">
+      {% endfor %}
+    </div>
+    <div class="about-copy">
+      <h2>{{ s.heading }}</h2>
+      {% for para in s.paragraphs %}
+      <p>{{ para }}</p>
+      {% endfor %}
+      {% if s.cta_label %}<a class="btn" href="{{ s.cta_url }}">{{ s.cta_label }}</a>{% endif %}
+    </div>
+  </div>
+</section>
